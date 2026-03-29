@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohammad Tasin | ML Researcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Tasin<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- ========== HOME SECTION ========== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="greeting">Hello, Myself</p>
+        <h1 class="hero-name">Mohammad Tasin</h1>
+        <h2 class="hero-role">Machine Learning Researcher</h2>
+        <p class="hero-goal">
+          I am passionate about Artificial Intelligence and Machine Learning,
+          currently exploring their real-world applications through continuous
+          learning and research. My focus is on building intelligent systems
+          and contributing to research that solves meaningful problems.
+        </p>
+        <p class="tagline">&ldquo;Try to learn from mistakes.&rdquo;</p>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/me.jpg" alt="Mohammad Tasin" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+
+      <!-- Education -->
+      <div class="about-card">
+        <h3>&#127891; Education</h3>
+        <p>
+          I am currently pursuing a <strong>B.Sc in Computer Science and Engineering</strong>
+          at <strong>International Islamic University Chittagong</strong>. My academic journey
+          has given me a strong foundation in algorithms, data structures, and software
+          development, while my self-driven research focus has taken me deep into the
+          world of Artificial Intelligence and Machine Learning.
+        </p>
+      </div>
+
+      <!-- Interests -->
+      <div class="about-card">
+        <h3>&#128161; Interests</h3>
+        <p>
+          I have a deep interest in <strong>Artificial Intelligence</strong> and
+          <strong>Machine Learning</strong>, especially in the areas of
+          <strong>Natural Language Processing (NLP)</strong>. I enjoy building AI
+          applications that solve real-world problems, conducting research experiments,
+          and staying up-to-date with the latest developments in intelligent systems.
+          I am driven by curiosity and the belief that technology can create a meaningful
+          positive impact on society.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-img">
+            <span class="project-emoji">&#127807;</span>
+          </div>
+          <div class="project-info">
+            <h3>Crop Yield Prediction</h3>
+            <p>A machine learning model that predicts crop yield based on various environmental and soil factors, helping farmers make data-driven decisions.</p>
+            <a href="https://github.com/Mohammad-Tasin22/Crop-Yield-Prediction-using-Machine-Learning" target="_blank" class="project-link">GitHub &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-img">
+            <span class="project-emoji">&#128172;</span>
+          </div>
+          <div class="project-info">
+            <h3>Sentiment Emotion Analyzer</h3>
+            <p>An NLP-powered application that analyzes text to detect sentiment and emotions using machine learning classification techniques.</p>
+            <a href="https://github.com/Mohammad-Tasin22/Sentiment-Emotion-Analyzer-using-Machine-Learning-NLP" target="_blank" class="project-link">GitHub &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-img">
+            <span class="project-emoji">&#10084;</span>
+          </div>
+          <div class="project-info">
+            <h3>HeartCare AI</h3>
+            <p>A heart disease prediction app powered by machine learning, designed to help users assess cardiovascular risk from medical indicators.</p>
+            <a href="https://github.com/Mohammad-Tasin22/HeartCare-AI-Heart-Disease-Prediction-App" target="_blank" class="project-link">GitHub &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-img">
+            <span class="project-emoji">&#128674;</span>
+          </div>
+          <div class="project-info">
+            <h3>Titanic Survival Prediction</h3>
+            <p>Comparing multiple supervised classification algorithms to predict Titanic passenger survival with model accuracy analysis.</p>
+            <a href="https://github.com/Mohammad-Tasin22/Titanic-survival-prediction-using-different-types-of-supervised-classification-algorithms" target="_blank" class="project-link">GitHub &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <div class="project-img">
+            <span class="project-emoji">&#128664;</span>
+          </div>
+          <div class="project-info">
+            <h3>Ford Car Price Prediction</h3>
+            <p>A regression model trained to predict Ford car prices based on features like mileage, year, and engine specs with accuracy evaluation.</p>
+            <a href="https://github.com/Mohammad-Tasin22/Ford-Car-Price-Prediction-Model-Training-Accuracy-Check" target="_blank" class="project-link">GitHub &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">&#128187;</div>
+          <h4>C</h4>
+          <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#9881;</div>
+          <h4>C++</h4>
+          <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128013;</div>
+          <h4>Python</h4>
+          <div class="progress-bar"><div class="progress" style="width:90%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#127758;</div>
+          <h4>HTML</h4>
+          <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#127912;</div>
+          <h4>CSS</h4>
+          <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128279;</div>
+          <h4>LangChain</h4>
+          <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128202;</div>
+          <h4>LangGraph</h4>
+          <div class="progress-bar"><div class="progress" style="width:72%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#9889;</div>
+          <h4>FastAPI</h4>
+          <div class="progress-bar"><div class="progress" style="width:78%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128451;</div>
+          <h4>SQL</h4>
+          <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS SECTION ========== -->
+  <section id="achievements" class="achievements">
+    <div class="container">
+      <h2 class="section-title">Achievements &amp; <span>Certificates</span></h2>
+      <div class="cert-grid">
+
+        <!-- Certificate 1: NASA -->
+        <div class="cert-card">
+          <div class="cert-img">
+            <img src="images/nasa_space.jpg" alt="NASA Space Apps Certificate" />
+          </div>
+          <div class="cert-info">
+            <h3>NASA Space Apps Challenge 2024</h3>
+            <p>Local Team Member &mdash; Team Galactic Innovators (Cumilla). Recognized for outstanding participation and efforts to address challenges on Earth and in space.</p>
+          </div>
+        </div>
+
+        <!-- Certificate 2: AI CERTs -->
+        <div class="cert-card">
+          <div class="cert-img">
+            <img src="images/prompt_engineering.jpg" alt="AI+ Prompt Engineer Certificate" />
+          </div>
+          <div class="cert-info">
+            <h3>AI+ Prompt Engineer Level 1&trade;</h3>
+            <p>Certified by AI CERTs&trade; as an AI+ Prompt Engineer Level 1. Blockchain-verified certification (No: c635a7cb8aed). Valid Aug 2025 &ndash; Aug 2026.</p>
+          </div>
+        </div>
+
+        <!-- Certificate 3: AgentX -->
+        <div class="cert-card">
+          <div class="cert-img">
+            <img src="images/agent_x.jpg" alt="AgentX AI Prompting Competition" />
+          </div>
+          <div class="cert-info">
+            <h3>AgentX AI Prompting Competition</h3>
+            <p>Certificate of Appreciation from NetCom Learning for outstanding performance and prize at the AgentX AI Prompting Competition at International Islamic University Chittagong.</p>
+          </div>
+        </div>
+
+        <!-- Certificate 4: IEEE LaTeX -->
+        <div class="cert-card">
+          <div class="cert-img">
+            <img src="images/latex.png" alt="IEEE LaTeX Workshop Certificate" />
+          </div>
+          <div class="cert-info">
+            <h3>IEEE CS &mdash; LaTeX Research Writing Workshop</h3>
+            <p>Certificate of Participation from IEEE Computer Society SEU Student Branch Chapter for the &ldquo;LaTeX Unlocked: The Research Writing Workshop&rdquo; held on November 17, 2025.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+
+      <div class="contact-wrapper">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p><strong>&#128140; Email:</strong> tasin6834@gmail.com</p>
+          <p><strong>&#128222; Phone:</strong> 01534136424</p>
+          <div class="social-links">
+            <a href="https://github.com/Mohammad-Tasin22" target="_blank" class="social-btn">GitHub</a>
+            <a href="https://www.facebook.com/profile.php?id=100028964021893" target="_blank" class="social-btn">Facebook</a>
+            <a href="https://www.instagram.com/tasin_ibn_musahar?igsh=M3Y0YnpxamkwMGk0" target="_blank" class="social-btn">Instagram</a>
+            <a href="https://www.linkedin.com/in/mohammad-tasin?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <!-- Simple contact form — no backend required -->
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" />
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+          </div>
+          <button class="btn" type="button">Send Message</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>&copy; 2026 Mohammad Tasin | ML Researcher</p>
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#" >Facebook</a>
+      <a href="#" >Instagram</a>
+      <a href="#" >LinkedIn</a>
+    </div>
+  </footer>
+
+  
