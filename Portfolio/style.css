@@ -1,82 +1,95 @@
-/* ---- CSS Variables (Color Palette) ---- */
+
 :root {
-  --bg-color: #07050f;
-  --snd-bg-color: #0d0a1a;
-  --text-color: #f0eaff;
-  --main-color: #a855f7;
-  --card-bg: #12102080;
-  --border-color: #a855f730;
+  /* Background colors */
+  --bg-color: #07050f;           /* Main dark background */
+  --snd-bg-color: #0d0a1a;       /* Secondary background (lighter) */
+  
+  /* Text colors */
+  --text-color: #f0eaff;         /* Main text - light purple/white */
+  
+  /* Accent color - used for highlights and buttons */
+  --main-color: #a855f7;         /* Purple accent color */
+  
+  /* Card styling */
+  --card-bg: #12102080;          /* Card background with transparency */
+  --border-color: #a855f730;     /* Border color with transparency */
 }
 
-/* ---- Reset & Base ---- */
+/* 
+   RESET - Clear default browser styles
+ */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* Make sizing easier to calculate */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  /* Smooth scrolling when clicking nav links */
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: Georgia, 'Times New Roman', serif;
-  line-height: 1.7;
+  line-height: 1.7;  /* Space between lines */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none;  /* Remove underlines from links */
   color: var(--main-color);
 }
 
 img {
-  max-width: 100%;
+  max-width: 100%;  /* Images don't overflow their containers */
   display: block;
 }
 
-/* ---- Shared Container ---- */
+/* 
+   CONTAINER - Keeps content centered
+*/
 .container {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  margin: 0 auto;        /* Center horizontally */
+  padding: 0 1.5rem;     /* Spacing on sides */
 }
 
-/* ---- Section Title ---- */
+/*
+   SECTION TITLES - All page headings
+*/
 .section-title {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2.5rem;
   color: var(--text-color);
-  letter-spacing: 1px;
+  letter-spacing: 1px;  /* Space between letters */
 }
 
 .section-title span {
-  color: var(--main-color);
+  color: var(--main-color);  /* Colored word inside title */
 }
 
-/* =============================================
-   NAVIGATION
-   ============================================= */
+/* 
+   HEADER & NAVIGATION - Top menu bar
+*/
 header {
-  position: fixed;
+  position: fixed;  /* Stays at top when scrolling */
   top: 0;
   left: 0;
   width: 100%;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
-  z-index: 999;
+  z-index: 999;  /* Stays above everything */
 }
 
 .navbar {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;  /* Logo | Links | Hamburger */
   align-items: center;
-  justify-content: space-between;
   padding: 1rem 2rem;
 }
 
-/* Logo */
+/* Logo styling */
 .logo {
   font-size: 1.6rem;
   font-weight: bold;
@@ -85,59 +98,60 @@ header {
 }
 
 .logo span {
-  color: var(--main-color);
+  color: var(--main-color);  /* Colored dot */
 }
 
-/* Nav Links */
+/* Navigation links styling */
 .nav-links {
-  list-style: none;
-  display: flex;
+  list-style: none;  /* Remove bullet points */
+  display: grid;
+  grid-template-columns: repeat(6, auto);  /* 6 links in a row */
   gap: 1.8rem;
+  justify-self: center;  /* Center the links */
 }
 
 .nav-links a {
   color: var(--text-color);
   font-size: 0.95rem;
   letter-spacing: 0.5px;
-  transition: color 0.3s;
+  transition: color 0.3s;  /* Smooth color change on hover */
 }
 
 .nav-links a:hover {
-  color: var(--main-color);
+  color: var(--main-color);  /* Change to purple on hover */
 }
 
-/* Hamburger (hidden on desktop) */
+/* Hamburger menu (for mobile) */
 .hamburger {
-  display: none;
+  display: none;  /* Hidden on desktop */
   font-size: 1.8rem;
   cursor: pointer;
   color: var(--main-color);
 }
 
-/* =============================================
-   HERO / HOME SECTION
-   ============================================= */
+/* 
+HERO SECTION 
+*/
 .hero {
-  min-height: 100vh;
-  display: flex;
+  min-height: 100vh;  /* Full screen height */
+  display: grid;
   align-items: center;
   background-color: var(--bg-color);
-  padding-top: 80px; /* offset for fixed nav */
+  padding-top: 80px;  /* Space for fixed nav bar */
 }
 
 .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;  /* Text on left, image on right */
   gap: 3rem;
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
-/* Text side */
+/* Left side - Text */
 .hero-text {
-  flex: 1;
+  max-width: 520px;
 }
 
 .greeting {
@@ -157,15 +171,14 @@ header {
 .hero-role {
   font-size: 1.3rem;
   color: var(--main-color);
-  font-weight: normal;
   margin-bottom: 1.2rem;
 }
 
 .hero-goal {
   font-size: 1rem;
   color: #c8b8e8;
-  max-width: 520px;
   margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .tagline {
@@ -184,18 +197,20 @@ header {
   border-radius: 4px;
   font-size: 0.95rem;
   margin-right: 1rem;
+  margin-bottom: 0.8rem;
   transition: background-color 0.3s;
   border: 2px solid var(--main-color);
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #9333ea;
+  background-color: #9333ea;  /* Darker purple */
   border-color: #9333ea;
   color: #fff;
 }
 
 .btn-outline {
-  background-color: transparent;
+  background-color: transparent;  /* No background */
   color: var(--main-color);
 }
 
@@ -204,23 +219,24 @@ header {
   color: #fff;
 }
 
-/* Profile Image */
+/* Right side - Profile image */
 .hero-image {
-  flex: 0 0 280px;
+  width: 280px;
+  height: 280px;
 }
 
 .hero-image img {
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%;  /* Circle shape */
   border: 4px solid var(--main-color);
-  box-shadow: 0 0 30px #a855f740;
+  box-shadow: 0 0 30px #a855f740;  /* Glow effect */
 }
 
-/* =============================================
-   ABOUT SECTION
-   ============================================= */
+/* 
+   ABOUT SECTION - Info cards
+*/
 .about {
   padding: 5rem 0;
   background-color: var(--snd-bg-color);
@@ -241,15 +257,14 @@ header {
 }
 
 .about-card p {
-ard p {
   color: #c8b8e8;
   font-size: 0.98rem;
-}
+  line-height: 1.6;
 }
 
-/* =============================================
-   PROJECTS SECTION
-   ============================================= */
+/* 
+   PROJECTS SECTION - Project cards grid
+*/
 .projects {
   padding: 5rem 0;
   background-color: var(--bg-color);
@@ -270,23 +285,32 @@ ard p {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px);  /* Move up on hover */
   border-color: var(--main-color);
 }
 
-/* Placeholder image area */
+/* Project image area */
 .project-img {
-  height: 140px;
+  width: 100%;
+  height: 180px;
   background-color: var(--snd-bg-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;  /* Center content */
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Fill the space */
+  object-position: center;
 }
 
 .project-emoji {
   font-size: 4rem;
 }
 
+/* Project text area */
 .project-info {
   padding: 1.2rem;
 }
@@ -301,6 +325,7 @@ ard p {
   font-size: 0.9rem;
   color: #c8b8e8;
   margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .project-link {
@@ -309,16 +334,16 @@ ard p {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
   padding-bottom: 2px;
+  transition: color 0.3s;
 }
 
 .project-link:hover {
-  color: #c084fc;
-  border-color: #c084fc;
+  color: #c084fc;  /* Light purple */
 }
 
-/* =============================================
-   SKILLS SECTION
-   ============================================= */
+/* 
+   SKILLS SECTION - Skill cards with bars
+*/
 .skills {
   padding: 5rem 0;
   background-color: var(--snd-bg-color);
@@ -326,7 +351,7 @@ ard p {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
 }
 
@@ -354,7 +379,7 @@ ard p {
   margin-bottom: 0.8rem;
 }
 
-/* Progress bar */
+/* Progress bar (skill level) */
 .progress-bar {
   width: 100%;
   height: 6px;
@@ -370,9 +395,9 @@ ard p {
   transition: width 1s ease;
 }
 
-/* =============================================
-   ACHIEVEMENTS SECTION
-   ============================================= */
+/* 
+   ACHIEVEMENTS SECTION - Certificate cards
+*/
 .achievements {
   padding: 5rem 0;
   background-color: var(--bg-color);
@@ -393,12 +418,13 @@ ard p {
 }
 
 .cert-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px);  /* Move up on hover */
   border-color: var(--main-color);
 }
 
 .cert-img {
-  height: 200px;
+  width: 100%;
+  height: 180px;
   overflow: hidden;
   background-color: var(--snd-bg-color);
 }
@@ -423,11 +449,34 @@ ard p {
 .cert-info p {
   font-size: 0.88rem;
   color: #c8b8e8;
+  line-height: 1.5;
 }
 
-/* =============================================
-   CONTACT SECTION
-   ============================================= */
+/* 
+   RESEARCH SECTION 
+*/
+.research {
+  padding: 5rem 0;
+  background-color: var(--bg-color);
+}
+
+.paper-grid {
+  display: grid;
+  place-items: center;  /* Center content */
+  min-height: 200px;
+}
+
+.coming-soon {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* 
+   CONTACT SECTION - Get in touch
+*/
 .contact {
   padding: 5rem 0;
   background-color: var(--snd-bg-color);
@@ -435,7 +484,7 @@ ard p {
 
 .contact-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;  /* Two columns: info and form */
   gap: 3rem;
 }
 
@@ -458,8 +507,8 @@ ard p {
 
 /* Social buttons */
 .social-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 0.8rem;
   margin-top: 1.2rem;
 }
@@ -471,6 +520,7 @@ ard p {
   color: var(--main-color);
   font-size: 0.88rem;
   transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
 .social-btn:hover {
@@ -478,7 +528,7 @@ ard p {
   color: #fff;
 }
 
-/* Form */
+/* Contact form inputs */
 .form-group {
   margin-bottom: 1rem;
 }
@@ -506,9 +556,9 @@ ard p {
   resize: vertical;
 }
 
-/* =============================================
-   FOOTER
-   ============================================= */
+/* 
+   FOOTER - Bottom section
+*/
 footer {
   background-color: var(--bg-color);
   border-top: 1px solid var(--border-color);
@@ -519,10 +569,11 @@ footer {
 }
 
 .footer-links {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   gap: 1.5rem;
   margin-top: 0.6rem;
+  justify-content: center;
 }
 
 .footer-links a {
@@ -535,80 +586,6 @@ footer {
   color: var(--main-color);
 }
 
-/* =============================================
-   RESPONSIVE DESIGN — MEDIA QUERIES
-   ============================================= */
 
-/* Tablets */
-@media (max-width: 900px) {
-  .hero-content {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
 
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .hero-image {
-    flex: none;
-  }
-
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .hero-name {
-    font-size: 2.2rem;
-  }
-
-  .hero-image img {
-    width: 200px;
-    height: 200px;
-  }
-
-  /* Show hamburger, hide nav links */
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background-color: var(--bg-color);
-    padding: 1rem 2rem;
-    gap: 1rem;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  /* Show nav when open class is added */
-  .nav-links.open {
-    display: flex;
-  }
-
-  .projects-grid,
-  .skills-grid,
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 1.6rem;
-  }
-
-  .btn {
-    display: block;
-    text-align: center;
-    margin-bottom: 0.8rem;
-    margin-right: 0;
-  }
-}
